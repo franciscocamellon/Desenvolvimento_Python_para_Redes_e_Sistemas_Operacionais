@@ -8,4 +8,3 @@
 - [ ] [Teste de Performance 03 **(OBRIGATÓRIO)**](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/tree/master/TP03)
 - [ ] [Teste de Performance 04](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/tree/master/TP04)
 - [ ] [Assessment **(OBRIGATÓRIO)**](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/tree/master/AT)
-
