@@ -14,13 +14,13 @@ Neste TP há questões discursivas e de implementação.
 
 #### 2. Sobre variáveis de ambiente, responda:
 1. O que são?
+    <p>Uma variável de ambiente é um valor nomeado dinamicamente que pode afetar o modo como os processos em execução irão se comportar em um computador. Elas são parte do ambiente no qual um processo executa.<p>
 1. Como elas podem ser obtidas pelo módulo ‘os’ de Python?
+    <p>Através do método <b>os.environ</b> que retorna um objeto de mapeamento representando uma string do ambiente, ou através do método <b>os.getenv(<i>key</i>)</b> sendo key a string que representa a variável de ambiente pretendida.</p>
+    <p>Ex.: <b>os.environ</b> <ul><li>environ({'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\Username','PATH': 'C:\\Windows\\system32;C:\\Windows})</ul></p>
+    <b>os.getenv(<i>'HOMEPATH'</i>)</b> <ul><li>\Users\Username</ul></p>
 1. Como pode ser obtido o caminho completo do diretório de usuário em Python, através das variáveis de ambiente?
-
-
-
-
-
+    <p>Como descrito no item anterior, acessando no objeto de mapeamento obtido através de <b>os.environ</b> o valor da chave 'HOMEPATH' (<i>os.environ['HOMEPATH']</i>) ou a partir de <b>os.getenv(<i>key</i>)</b> passando como parâmetro key a string 'HOMEPATH'.<p>
 
 
 #### 3. Escreva um programa usando o módulo ‘os’ de Python que imprima o PID do próprio processo e também seu GID (identificador de grupo) caso seja sistema do tipo Linux.
