@@ -7,7 +7,7 @@ Neste TP há questões discursivas e de implementação.
 
 ![gif](/gifs/questao01.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/tree/master/TP01/questao_01.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/TP01/questao_01.py)
 
 
 
