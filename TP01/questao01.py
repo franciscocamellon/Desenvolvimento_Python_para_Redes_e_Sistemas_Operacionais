@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-/******************************* ASSESSMENT *********************************
+/************************ TESTE DE PERFORMANCE 01 **************************
 *    Questao 01                                                            *
 *        Aluno           : Francisco Alves Camello Neto                    *
 *        Disciplina      : Desenvolvimento Python para Redes e             *
