@@ -44,9 +44,9 @@ Neste TP há questões discursivas e de implementação.
 
 #### 5. Escreva um programa que indique se um arquivo existe ou não. Caso exista, indique se é realmente um arquivo ou não.
 
-![gif](/gifs/questao06.gif)
+![gif](/gifs/questao05.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_06.py)
+[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao05.py)
 
 
 
