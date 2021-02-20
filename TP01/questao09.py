@@ -24,7 +24,7 @@ class Questao_09():
 
     def __init__(self):
         """ Constructor """
-        self.search_path = '.\\7'
+        self.search_path = '.\\'
         self.error = ''
         self.list_dir = list()
         self.list_file = list()
