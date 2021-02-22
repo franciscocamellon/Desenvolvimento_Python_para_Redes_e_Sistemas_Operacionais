@@ -119,7 +119,7 @@ Neste TP há questões discursivas e de implementação.
     <p>Ex.: os.<b>startfile</b>() <ul><li>os.startfile('C:\Users\Username\text_file.txt')</ul>
     Este comando inicia um processo do bloco de notas no windows e abre o arquivo text_file.txt.</p>
 <p>Ou então, a partir do módulo subprocess com os.subprocess.<b>Popen</b>(<i>args</i>) do módulo <b><i>os</i></b> que executa o programa descrito por <i>args</i> em um novo processo.</p>
-    os.subprocess.<b>Popen</b>() <ul><li>os.subprocess.<b>Popen</b>('notepad')</ul></p>
+    <p>os.subprocess.<b>Popen</b>() <ul><li>os.subprocess.<b>Popen</b>('notepad')</ul></p>
 
 
 
@@ -135,7 +135,10 @@ Neste TP há questões discursivas e de implementação.
 
 
 #### 14. Explique a principal semelhança e a principal diferença entre os comandos psutil.pids e psutil.process_iter.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
+<p><ul><li>psutil.<b>pids</b>() </ul>retorna uma lista ordenada de PIDs em execução no momento. </p>
+<p><ul><li>psutil.<b>process_iter</b>(<i>attrs=None, ad_value=None</i>) </ul>retorna um iterador que produz uma instância da classe psutil.<b>Process</b>() para todos os processos em execução na máquina local.</p>
+<p>Segundo a documentação este último deve ser preterido em relação ao primeiro ao se iterar sobre os processos a fim de se evitar a condição de concorrência.</p>
+
 
 #### 15. Escreva uma função em Python que, dado um número PID, imprima o nome do usuário proprietário, o tempo de criação e o uso de memória em KB.
 ![gif](./gifs/questao15.gif)
