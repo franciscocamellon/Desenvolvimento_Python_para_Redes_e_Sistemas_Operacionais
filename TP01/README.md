@@ -35,11 +35,9 @@ Neste TP há questões discursivas e de implementação.
 
 
 #### 4. Que função do módulo ‘os’ de Python é usada para obter o caminho absoluto de um diretório com caminho relativo? Dê um exemplo.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
+<p>A função que é usasda para obter o caminho absoluto de um diretório a partir do caminho relativo é os.path.<b>abspath</b>(<i>path</i>). Ela retorna uma versão normalizada e absolutizada do nome de caminho <i>path</i>, conforme percebe-se no exemplo abaixo:</p>
 
-
-
-
+![gif](./gifs/questao04.gif)
 
 
 #### 5. Escreva um programa que indique se um arquivo existe ou não. Caso exista, indique se é realmente um arquivo ou não.
@@ -95,7 +93,7 @@ Neste TP há questões discursivas e de implementação.
 
 
 #### 10. Os comandos os.exec* e os.spawn* são bastante parecidos. No entanto, eles apresentam uma diferença em suas execuções. Aponte qual é esta diferença.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
+<p>Os comandos os.<b>exec</b>* executam um novo programa, substituindo imediatamente o processo atual. O novo executável é carregado no processo atual e terá a mesma identificação de processo do chamador. Já os comandos os.<b>spawn</b>* executam o programa em um <b><i>novo</i></b> processo.</p>
 
 
 
@@ -117,11 +115,11 @@ Neste TP há questões discursivas e de implementação.
 #### 12. Indique uma maneira de criar um processo externo ao seu programa usando o módulo ‘os’ e usando o módulo ‘subprocess’ de Python. Dê um exemplo de cada.  
   
 
-<p>Através do método <i>startfile(path[, operation])</i> do módulo <b><i>os</i></b> do Python que inicia o arquivo com o programa associado a ele caso exista.</p>
-    <p>Ex.: <b>os.startfile</b> <ul><li>os.startfile('C:\Users\Username\text_file.txt')</ul>
+<p>Através do método os.<b>startfile</b>(<i>path[, operation]</i>) do módulo <b><i>os</i></b> do Python que inicia o arquivo com o programa associado a ele caso exista.</p>
+    <p>Ex.: os.<b>startfile</b>() <ul><li>os.startfile('C:\Users\Username\text_file.txt')</ul>
     Este comando inicia um processo do bloco de notas no windows e abre o arquivo text_file.txt.</p>
-<p>Ou então, a partir do módulo subprocess com <i>subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)</i> do módulo <b><i>os</i></b> do Python que inicia o arquivo com o programa associado a ele caso exista.</p>
-    <b>os.getenv(<i>'HOMEPATH'</i>)</b> <ul><li>\Users\Username</ul></p>
+<p>Ou então, a partir do módulo subprocess com os.subprocess.<b>Popen</b>(<i>args</i>) do módulo <b><i>os</i></b> que executa o programa descrito por <i>args</i> em um novo processo.</p>
+    os.subprocess.<b>Popen</b>() <ul><li>os.subprocess.<b>Popen</b>('notepad')</ul></p>
 
 
 
