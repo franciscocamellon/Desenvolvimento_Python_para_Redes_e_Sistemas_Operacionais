@@ -54,7 +54,7 @@ Neste TP há questões discursivas e de implementação.
 
 ![gif](./gifs/questao06.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_06.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao06.py)
 
 
 
@@ -65,7 +65,7 @@ Neste TP há questões discursivas e de implementação.
 
 ![gif](./gifs/questao07.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_07.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao07.py)
 
 
 
@@ -76,7 +76,7 @@ Neste TP há questões discursivas e de implementação.
 
 ![gif](./gifs/questao08.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_08.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao08.py)
 
 
 
@@ -87,7 +87,7 @@ Neste TP há questões discursivas e de implementação.
 
 ![gif](./gifs/questao09.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_09.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao09.py)
 
 
 
@@ -107,15 +107,21 @@ Neste TP há questões discursivas e de implementação.
 
 ![gif](./gifs/questao11.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_11.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao11.py)
 
 
 
 
 
 
-#### 12. Indique uma maneira de criar um processo externo ao seu programa usando o módulo ‘os’ e usando o módulo ‘subprocess’ de Python. Dê um exemplo de cada.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
+#### 12. Indique uma maneira de criar um processo externo ao seu programa usando o módulo ‘os’ e usando o módulo ‘subprocess’ de Python. Dê um exemplo de cada.  
+  
+
+<p>Através do método <i>startfile(path[, operation])</i> do módulo <b><i>os</i></b> do Python que inicia o arquivo com o programa associado a ele caso exista.</p>
+    <p>Ex.: <b>os.startfile</b> <ul><li>os.startfile('C:\Users\Username\text_file.txt')</ul>
+    Este comando inicia um processo do bloco de notas no windows e abre o arquivo text_file.txt.</p>
+<p>Ou então, a partir do módulo subprocess com <i>subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)</i> do módulo <b><i>os</i></b> do Python que inicia o arquivo com o programa associado a ele caso exista.</p>
+    <b>os.getenv(<i>'HOMEPATH'</i>)</b> <ul><li>\Users\Username</ul></p>
 
 
 
@@ -127,36 +133,36 @@ Neste TP há questões discursivas e de implementação.
 #### 13. Usando o módulo ‘subprocess’ de Python, crie um processo externo e imprima o PID dele.
 ![gif](./gifs/questao13.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_13.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao13.py)
 
 
 #### 14. Explique a principal semelhança e a principal diferença entre os comandos psutil.pids e psutil.process_iter.
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
 
 #### 15. Escreva uma função em Python que, dado um número PID, imprima o nome do usuário proprietário, o tempo de criação e o uso de memória em KB.
-![gif](./gifs/questao13.gif)
+![gif](./gifs/questao15.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_13.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao15.py)
 
 #### 16. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima o tempo de CPU em segundos por núcleo.
-![gif](./gifs/questao13.gif)
+![gif](./gifs/questao16.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_13.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao16.py)
 
 #### 17. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima 20 vezes, de segundo a segundo, o percentual do uso de CPU do computador.
-![gif](./gifs/questao13.gif)
+![gif](./gifs/questao17.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_13.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao17.py)
 
 #### 18. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima em GB, quanto de memória principal e quanto de memória de paginação (swap) existem no computador.
-![gif](./gifs/questao13.gif)
+![gif](./gifs/questao18.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_13.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao18.py)
 
 #### 19. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima em GB, quanto de armazenamento disponível há na partição do sistema (onde o sistema está instalado).
-![gif](./gifs/questao13.gif)
+![gif](./gifs/questao19.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_13.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao19.py)
 
 #### 20. Escreva um programa em Python usando o módulo ‘psutil’, que imprima para a partição corrente:
     a. o nome do dispositivo,
@@ -164,6 +170,6 @@ Neste TP há questões discursivas e de implementação.
     c. o total de armazenamento em GB e
     d. o armazenamento disponível em GB.
 
-![gif](./gifs/questao13.gif)
+![gif](./gifs/questao20.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao_13.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP01/questao20.py)
