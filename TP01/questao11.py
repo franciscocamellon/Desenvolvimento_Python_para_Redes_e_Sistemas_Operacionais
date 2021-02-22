@@ -16,14 +16,14 @@ import errno
 
 class Questao_11():
     """
-    This program gets the logged username.
+    This program creates a process and opens a user-given text file.
     """
 
     def __init__(self):
         """ Constructor """
         self.search_path, self.error = '', ''
-        self.file_name = 'questao11.txt'
-        self.file_path = '.\\7'
+        self.file_name = 'text_file.txt'
+        self.file_path = '.\\7'  # dado inexistente forçando input
         print('===' * 25, 'Questão 11'.center(75), '===' * 25, sep='\n')
         self.init_class()
         self.process_data()
