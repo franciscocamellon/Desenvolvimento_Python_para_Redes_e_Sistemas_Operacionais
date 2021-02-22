@@ -14,7 +14,6 @@ import os
 import sys
 import psutil
 import time
-from psutil import NoSuchProcess
 from psutil._common import bytes2human
 
 
@@ -77,11 +76,11 @@ class Questao_15():
 
         if self.error:
             print(self.error,
-                  '---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
+                  '---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep='\n')
         else:
             for k, v in self.proc_info.items():
                 print('{}{:<22} {:<15}'.format(' '*3,k, v))
-            print('---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
+            print('---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep='\n')
 
 
 Questao_15().print_result()
