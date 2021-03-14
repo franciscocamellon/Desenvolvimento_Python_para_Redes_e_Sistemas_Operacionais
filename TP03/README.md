@@ -1,169 +1,69 @@
 # Desenvolvimento Python para Redes e Sistemas Operacionais
 
-## Teste de Performance 01
+## Teste de Performance 03
+
 Neste TP há questões discursivas e de implementação.
 
-#### 1. Escreva um programa usando o módulo ‘os’ de Python que imprima o nome de usuário.
+#### 1. O que é um processo cliente?
 
-![gif](/gifs/questao01.gif)
+#### 2. O que é um processo servidor?
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_01.py)
+#### 3. A função socket() do módulo ‘socket’ de Python é responsável por criar um socket no processo tanto para protocolo TCP, quanto UDP. Como diferenciar se o socket a ser criado é TCP e UDP?
 
+#### 4. Para sockets TCP, responda:
 
+1. Que sequência de chamadas de funções em Python deve ser realizada pelo cliente? (Não precisa especificar os parâmetros)
+1. Que sequência de chamadas de funções em Python deve ser realizada pelo servidor? (Não precisa especificar os parâmetros)
+1. Quais destas funções são bloqueantes, isto é, o processo fica esperando?
 
+#### 5. Para sockets UDP, responda:
 
-#### 2. Sobre variáveis de ambiente, responda:
-1. O que são?
-1. Como elas podem ser obtidas pelo módulo ‘os’ de Python?
-1. Como pode ser obtido o caminho completo do diretório de usuário em Python, através das variáveis de ambiente?
+1. Que sequência de chamadas de funções em Python deve ser realizada pelo cliente? (Não precisa especificar os parâmetros)
+1. Que sequência de chamadas de funções em Python deve ser realizada pelo servidor? (Não precisa especificar os parâmetros)
+1. Quais destas funções são bloqueantes, isto é, o processo fica esperando?
 
+#### 6. Para que serve o comando _socket.bind()_?
 
+#### 7. Em sockets Python, como é representado um endereço de um processo remoto?
 
+#### 8. Crie um programa cliente que:
 
-
-
-
-#### 3. Escreva um programa usando o módulo ‘os’ de Python que imprima o PID do próprio processo e também seu GID (identificador de grupo) caso seja sistema do tipo Linux.
-
-![gif](/gifs/questao03.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_03.py)
-
-
-
-
-
-
-#### 4. Que função do módulo ‘os’ de Python é usada para obter o caminho absoluto de um diretório com caminho relativo? Dê um exemplo.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
-
-
-
-
-
-
-#### 5. Escreva um programa que indique se um arquivo existe ou não. Caso exista, indique se é realmente um arquivo ou não.
-
-![gif](/gifs/questao06.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_06.py)
-
-
-
-#### 6. Escreva um programa que indique a extensão de um arquivo usando função do módulo os.path.
-
-![gif](/gifs/questao06.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_06.py)
-
-
-
-
-
-
-#### 7. Escreva um programa que imprima apenas o caminho absoluto de um arquivo com nome relativo. A impressão não deve conter o nome do arquivo, apenas o caminho.
-
-![gif](/gifs/questao07.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_07.py)
-
-
-
-
-
-
-#### 8. Escreva um programa que mostre a quantidade de bytes (em KB) de cada arquivo em um diretório.
+1. Conecte-se a um servidor via UDP de mesmo IP e porta 9991.
+1. Peça ao servidor que envie a quantidade total e disponível de armazenamento do disco principal.
+1. Receba e exiba a informação.
 
 ![gif](/gifs/questao08.gif)
 
 [Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_08.py)
 
+#### 9. Associado à questão anterior, crie um programa servidor que:
 
-
-
-
-
-#### 9. Escreva um programa que mostre as datas de criação e modificação de cada arquivo em um diretório.
+1. Espere conexões UDP de processos na porta 9991.
+1. Aguarde indefinidamente conexão de clientes.
+1. Sirva cada cliente com a informação da quantidade total e disponível de armazenamento do disco principal (diretório corrente que o processo servidor está executando).
 
 ![gif](/gifs/questao09.gif)
 
 [Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_09.py)
 
+#### 10. Crie um programa cliente que:
 
+1. Conecte-se a um servidor via TCP de mesmo IP e porta 8881.
+1. Envie ao servidor o nome de um arquivo para que ele transmita este arquivo para o cliente.
+1. Receba o tamanho do arquivo.
+1. Se o tamanho for válido, receba o arquivo. Caso contrário, avise ao usuário que o arquivo não foi encontrado.
 
+![gif](/gifs/questao10.gif)
 
+[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_10.py)
 
+#### 11. Associado à questão anterior, crie um programa servidor que:
 
-#### 10. Os comandos os.exec* e os.spawn* são bastante parecidos. No entanto, eles apresentam uma diferença em suas execuções. Aponte qual é esta diferença.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
-
-
-
-
-
-
-
-#### 11. Escreva um programa que obtenha um nome de um arquivo texto do usuário e crie um processo, usando o módulo ‘os’, de bloco de notas (notepad) para abri-lo.
+1. Espere conexões TCP de processos na porta 8881.
+1. Aguarde indefinidamente conexão de clientes.
+1. Receba a requisição do arquivo do cliente e envie o seu tamanho, caso o tenha encontrado. Em caso negativo, envie um valor inválido -1.
+1. Envie o arquivo para o cliente, caso o encontre.
 
 ![gif](/gifs/questao11.gif)
 
 [Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_11.py)
-
-
-
-
-
-
-#### 12. Indique uma maneira de criar um processo externo ao seu programa usando o módulo ‘os’ e usando o módulo ‘subprocess’ de Python. Dê um exemplo de cada.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
-
-
-
-
-
-
-
-
-#### 13. Usando o módulo ‘subprocess’ de Python, crie um processo externo e imprima o PID dele.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-
-#### 14. Explique a principal semelhança e a principal diferença entre os comandos psutil.pids e psutil.process_iter.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
-
-#### 15. Escreva uma função em Python que, dado um número PID, imprima o nome do usuário proprietário, o tempo de criação e o uso de memória em KB.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 16. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima o tempo de CPU em segundos por núcleo.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 17. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima 20 vezes, de segundo a segundo, o percentual do uso de CPU do computador.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 18. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima em GB, quanto de memória principal e quanto de memória de paginação (swap) existem no computador.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 19. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima em GB, quanto de armazenamento disponível há na partição do sistema (onde o sistema está instalado).
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 20. Escreva um programa em Python usando o módulo ‘psutil’, que imprima para a partição corrente:
-    a. o nome do dispositivo,
-    b. o tipo de sistema de arquivos que ela possui (FAT, NTFS, EXT, ...),
-    c. o total de armazenamento em GB e
-    d. o armazenamento disponível em GB.
-
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
