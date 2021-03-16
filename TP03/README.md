@@ -5,26 +5,50 @@
 Neste TP há questões discursivas e de implementação.
 
 #### 1. O que é um processo cliente?
+Um processo cliente corresponde ao programa que irá se conectar a um servidor e fazer requisições a ele. É um programa ativo.
 
 #### 2. O que é um processo servidor?
+Um processo servidor, por sua vez, está relacionado ao programa que ficará esperando clientes se conectarem e fazerem requisições a ele. É um programa passivo.
 
 #### 3. A função socket() do módulo ‘socket’ de Python é responsável por criar um socket no processo tanto para protocolo TCP, quanto UDP. Como diferenciar se o socket a ser criado é TCP e UDP?
+Através do segundo parâmetro a ser passado à função. Este, no que lhe concerne, pode receber a constante _SOCK_STREAM_, usada para criar sockets TCP's ou a constante _SOCK_DGRAM_, usada para criar sockets UDP's.
 
 #### 4. Para sockets TCP, responda:
 
 1. Que sequência de chamadas de funções em Python deve ser realizada pelo cliente? (Não precisa especificar os parâmetros)
+    * client = socket.socket(family, type)
+    * client.connect((host, port))
+    * client.send(msg.encode('encoding'))
+    * client.close()
 1. Que sequência de chamadas de funções em Python deve ser realizada pelo servidor? (Não precisa especificar os parâmetros)
+    * server = socket.socket(family, type)
+    * server.bind((host, port))
+    * server.listen()
+    * server.accept()
+    * server.recv()
+    * server.close()
 1. Quais destas funções são bloqueantes, isto é, o processo fica esperando?
+   * server.recv() é um método blocante
 
 #### 5. Para sockets UDP, responda:
 
 1. Que sequência de chamadas de funções em Python deve ser realizada pelo cliente? (Não precisa especificar os parâmetros)
+    * client = socket.socket(family, type)
+    * client.sendto(msg.encode('encoding'), (host, port))
+    * client.close()
 1. Que sequência de chamadas de funções em Python deve ser realizada pelo servidor? (Não precisa especificar os parâmetros)
+    * server = socket.socket(family, type)
+    * server.bind((host, port))
+    * server.recvfrom(buffer_size)
+    * server.close()
 1. Quais destas funções são bloqueantes, isto é, o processo fica esperando?
+    * server.recvfrom(buffer_size)
 
 #### 6. Para que serve o comando _socket.bind()_?
+Liga o socket ao endereço. O socket ainda não deve estar vinculado.
 
 #### 7. Em sockets Python, como é representado um endereço de um processo remoto?
+<p></p>
 
 #### 8. Crie um programa cliente que:
 
