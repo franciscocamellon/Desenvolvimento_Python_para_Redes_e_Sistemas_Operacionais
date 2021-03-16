@@ -14,40 +14,36 @@ import psutil
 import pickle
 
 
-class Questao_09():
-    """ This is a UDP server program. """
+localIP = socket.gethostname()
+localPort = 9991
+bufferSize = 1024
 
-    def __init__(self):
-        """ Constructor """
-        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.server_host = socket.gethostname()
-        self.door = 9991
-        self.server_socket.bind((self.server_host, self.door))
-        self.server_socket.listen()
-        print('Servidor de nome {} esperando conexão na porta {}'.format(self.server_host, self.door))
+msgFromServer = "Hello UDP Client"
+bytesToSend = str.encode(msgFromServer)
 
-        (socket_cliente, addr) = self.server_socket.accept()
-        print("Conectado a:", str(addr))
+disk_info = psutil.disk_partitions(all=False)
+bytes_to_send = pickle.dumps(disk_info)
 
-        while True:
-            # Recebe pedido do cliente:
-            msg = socket_cliente.recv(4)
-            if msg.decode('ascii') == 'fim':
-                break
-            # Gera a lista de resposta
-            resposta = []
-            resposta.append(psutil.cpu_percent())
-            mem = psutil.virtual_memory()
-            mem_percent = mem.used/mem.total
-            resposta.append(mem_percent)
-            # Prepara a lista para o envio
-            bytes_resp = pickle.dumps(resposta)
-            # Envia os dados
-            socket_cliente.send(bytes_resp)
+# Create a datagram socket
+UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
-        # Fecha socket do servidor e cliente
-        socket_cliente.close()
-        self.server_socket.close()
+# Bind to address and ip
+UDPServerSocket.bind((localIP, localPort))
 
+print("UDP server up and listening")
 
-Questao_09()
+# Listen for incoming datagrams
+while(True):
+
+    bytesAddressPair = UDPServerSocket.recvfrom(bufferSize)
+    message = bytesAddressPair[0].decode('ascii')
+    address = bytesAddressPair[1]
+
+    clientMsg = "Message from Client:{}".format(message)
+    clientIP = "Client IP Address:{}".format(address)
+
+    print(clientMsg)
+    print(clientIP)
+
+    # Sending a reply to client
+    UDPServerSocket.sendto(bytes_to_send, address)
