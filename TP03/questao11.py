@@ -23,7 +23,7 @@ class Questao_11():
         self.door = 8881
         self.server_socket.bind((self.server_host, self.door))
         self.server_socket.listen()
-        print('Servidor de nome {} esperando conexão na porta {}'.format(
+        print('\nServidor de nome {} esperando conexão na porta {}'.format(
             self.server_host, self.door))
 
         while True:
