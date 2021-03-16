@@ -56,7 +56,7 @@ Liga o socket ao endereço. O socket ainda não deve estar vinculado.
 1. Peça ao servidor que envie a quantidade total e disponível de armazenamento do disco principal.
 1. Receba e exiba a informação.
 
-![gif](/gifs/questao08.gif)
+![gif](./gifs/questao08.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP03/questao08.py)
 
@@ -66,7 +66,7 @@ Liga o socket ao endereço. O socket ainda não deve estar vinculado.
 1. Aguarde indefinidamente conexão de clientes.
 1. Sirva cada cliente com a informação da quantidade total e disponível de armazenamento do disco principal (diretório corrente que o processo servidor está executando).
 
-![gif](/gifs/questao09.gif)
+![gif](./gifs/questao09.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP03/questao09.py)
 
@@ -77,7 +77,7 @@ Liga o socket ao endereço. O socket ainda não deve estar vinculado.
 1. Receba o tamanho do arquivo.
 1. Se o tamanho for válido, receba o arquivo. Caso contrário, avise ao usuário que o arquivo não foi encontrado.
 
-![gif](/gifs/questao10.gif)
+![gif](./gifs/questao10.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP03/questao10.py)
 
@@ -88,6 +88,6 @@ Liga o socket ao endereço. O socket ainda não deve estar vinculado.
 1. Receba a requisição do arquivo do cliente e envie o seu tamanho, caso o tenha encontrado. Em caso negativo, envie um valor inválido -1.
 1. Envie o arquivo para o cliente, caso o encontre.
 
-![gif](/gifs/questao11.gif)
+![gif](./gifs/questao11.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/TP03/questao11.py)
