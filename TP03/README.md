@@ -32,9 +32,9 @@ Neste TP há questões discursivas e de implementação.
 1. Peça ao servidor que envie a quantidade total e disponível de armazenamento do disco principal.
 1. Receba e exiba a informação.
 
-![gif](/gifs/questao08.gif)
+![gif](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/gifs/questao08.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_08.py)
+[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao08.py)
 
 #### 9. Associado à questão anterior, crie um programa servidor que:
 
@@ -42,9 +42,9 @@ Neste TP há questões discursivas e de implementação.
 1. Aguarde indefinidamente conexão de clientes.
 1. Sirva cada cliente com a informação da quantidade total e disponível de armazenamento do disco principal (diretório corrente que o processo servidor está executando).
 
-![gif](/gifs/questao09.gif)
+![gif](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/gifs/questao09.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_09.py)
+[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao09.py)
 
 #### 10. Crie um programa cliente que:
 
@@ -53,9 +53,9 @@ Neste TP há questões discursivas e de implementação.
 1. Receba o tamanho do arquivo.
 1. Se o tamanho for válido, receba o arquivo. Caso contrário, avise ao usuário que o arquivo não foi encontrado.
 
-![gif](/gifs/questao10.gif)
+![gif](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/gifs/questao10.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_10.py)
+[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao10.py)
 
 #### 11. Associado à questão anterior, crie um programa servidor que:
 
@@ -64,6 +64,6 @@ Neste TP há questões discursivas e de implementação.
 1. Receba a requisição do arquivo do cliente e envie o seu tamanho, caso o tenha encontrado. Em caso negativo, envie um valor inválido -1.
 1. Envie o arquivo para o cliente, caso o encontre.
 
-![gif](/gifs/questao11.gif)
+![gif](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/gifs/questao11.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_11.py)
+[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao11.py)
