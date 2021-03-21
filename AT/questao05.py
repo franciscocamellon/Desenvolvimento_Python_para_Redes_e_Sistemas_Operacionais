@@ -9,9 +9,7 @@
 *        Nome do arquivo : questao_05.py                                   *
 ***************************************************************************/
 """
-import psutil
 import time
-from psutil._common import bytes2human
 
 
 class Questao_05():
