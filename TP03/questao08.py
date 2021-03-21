@@ -17,7 +17,7 @@ import psutil
 import pickle
 from psutil._common import bytes2human
 
-
+#CLIENT
 msgFromClient = " Hello UDP Server"
 bytesToSend = msgFromClient.encode('ascii')
 

@@ -13,7 +13,7 @@ import socket
 import psutil
 import pickle
 
-
+#SERVER
 localIP = socket.gethostname()
 localPort = 9991
 bufferSize = 1024
