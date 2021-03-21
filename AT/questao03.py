@@ -9,50 +9,67 @@
 *        Nome do arquivo : questao_03.py                                   *
 ***************************************************************************/
 """
-import psutil
-import time
+import os
+from pathlib import Path as path
 from psutil._common import bytes2human
+import errno
+
+
 class Questao_03():
     """
-    This program gets the logged username.
+    This program lists the files in a given directory.
     """
 
     def __init__(self):
         """ Constructor """
-        self.info_dict = {}
-        self.username = ''
+        self.search_path = path.home() / 'Documents'
+        self.error = ''
+        self.list_dir = list()
+        self.list_file = list()
+        print('===' * 25, 'Questão 03'.center(75), '===' * 25, sep='\n')
+        self.init_class()
         self.process_data()
 
     def init_class(self):
         """ This function receives the input data from users. """
-        pass
+
+        if os.path.exists(self.search_path):
+            self.list_dir = os.listdir(self.search_path)
+        else:
+            self.search_path = input(str('Digite o caminho de um diretório: '))
+            os.chdir(self.search_path)
+            self.list_dir = os.listdir(os.chdir(self.search_path))
 
     def process_data(self):
         """ This function process the input data from init_class. """
-
-        for i in psutil.process_iter():
-            if psutil.pid_exists(i.pid):
-                self.info_dict[i.pid] = [
-                    i.name(),
-                    i.cpu_percent(),
-                    round(i.memory_percent(), 2)
-                ]
-            else:
+        for item in self.list_dir:
+            if os.path.isfile(os.path.join(self.search_path, item)):
+                self.list_file.append({
+                    'name': item,
+                    'size': os.stat(os.path.join(self.search_path, item)).st_size
+                })
+                self.list_file.sort(key=lambda x: x['size'], reverse=True)
+            elif os.path.isdir(os.path.join(self.search_path, item)):
                 pass
-        return self.info_dict
+            else:
+                self.error = FileNotFoundError(errno.ENOENT, os.strerror(
+                    errno.ENOENT), os.path.basename(item))
+        with open('questao03.txt', 'w') as _file:
+            _file.write(str(self.list_file))
 
     def print_result(self):
         """ This is a printer! It prints. """
-        # info_dict = self.process_data()
-        print('===' * 25, 'Questão 03'.center(75), '===' * 25, sep='\n')
-        print('{}{:<7}{:<10}{:<10}{:<10}'.format(' '*2, 'PID',
-                                                 'CPU %', 'MEM %', 'Nome'), '---' * 25, sep='\n')
-        time.sleep(1)
-        for pid, info_pid in self.info_dict.items():
-            print('{}{:<7}{:<10}{:<10}{:<10}'.format(
-                ' '*2, pid, info_pid[1], info_pid[2], info_pid[0]))
-            time.sleep(0.1)
-        print('---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
+        if self.error:
+            print(self.error,
+                  '---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
+        else:
+            print('Conteúdo do diretório: \n {}'.format(os.path.abspath(self.search_path)),
+                  '{} {:<10} {:^10}'.format(' '*2, 'Tamanho', 'Arquivo'), sep="\n")
+            for _file in self.list_file:
+                print('{} {:<10} {:^10}'.format(
+                    ' '*2, bytes2human(_file['size']), _file['name']))
+        print('---' * 25, 'O arquivo questao03.txt foi criado com sucesso!',
+              '---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
 
 
 Questao_03().print_result()
