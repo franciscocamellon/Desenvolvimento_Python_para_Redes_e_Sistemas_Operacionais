@@ -7,7 +7,7 @@
 1. imprima o nome do processo e seu PID;
 1. imprima também o percentual de uso de CPU e de uso de memória.
 
-![gif](/gifs/questao01.gif)
+![gif](./gifs/questao01.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao01.py)
 
@@ -16,7 +16,7 @@
 
 #### 2. Escreva um programa que obtenha um nome de um arquivo texto do usuário e crie um processo para executar o programa do sistema Windows bloco de notas (notepad) para abrir o arquivo.
 
-![gif](/gifs/questao02.gif)
+![gif](./gifs/questao02.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao02.py)
 
@@ -31,7 +31,7 @@
 1. Ordene decrescentemente esta estrutura pelo valor da quantidade de bytes ocupada em disco (pode usar as funções sort ou sorted);
 1. gere um arquivo texto com os valores desta estrutura ordenados.
 
-![gif](/gifs/questao03.gif)
+![gif](./gifs/questao03.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao03.py)
 
@@ -42,17 +42,17 @@
 
 #### 4. Escreva um programa em Python que leia um arquivo texto e apresente na tela o seu conteúdo reverso. Exemplo:
 
-arquivo.txt
+#### arquivo.txt
 
     Bom dia
     Você pode falar agora?
 
-Resultado na tela:
+#### Resultado na tela:
 
     ?aroga ralaf edop êcoV
     aid moB
 
-![gif](/gifs/questao04.gif)
+![gif](./gifs/questao04.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao04.py)
 
@@ -70,7 +70,7 @@ a.txt | b.txt
 #### Seu programa deve somar elemento por elemento de cada arquivo e imprimir o resultado na tela. Isto é, o primeiro elemento de a.txt deve ser somado ao primeiro elemento de b.txt, segundo elemento de a.txt deve ser somado ao segundo elemento de b.txt, e assim sucessivamente. Caso um arquivo tenha mais elementos que o outro, os elementos que sobrarem do maior devem ser somados a zero.
 
 
-![gif](/gifs/questao06.gif)
+![gif](./gifs/questao06.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao05.py)
 
@@ -81,7 +81,7 @@ a.txt | b.txt
 1. O cliente envia para o servidor o nome de um diretório e recebe a lista de arquivos (apenas arquivos) existente nele.
 1. O servidor recebe a requisição do cliente, captura o nome dos arquivos no diretório em questão e envia a resposta ao cliente de volta.
 
-![gif](/gifs/questao06.gif)
+![gif](./gifs/questao06.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao06.py)
 
@@ -95,7 +95,7 @@ a.txt | b.txt
 1. O cliente envia para o servidor o pedido de obtenção da quantidade total e disponível de memória no servidor e espera receber a resposta durante 5s. Caso passem os 5s, faça seu programa cliente tentar novamente mais 5 vezes (ainda esperando 5s a resposta) antes de desistir.
 1. O servidor repetidamente recebe a requisição do cliente, captura a informação da quantidade total e disponível de memória há no servidor e envia a resposta ao cliente de volta.
 
-![gif](/gifs/questao07.gif)
+![gif](./gifs/questao07.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao07.py)
 
@@ -121,7 +121,7 @@ def fatorial(n):
 1. usando o módulo threading com 4 threads;
 1. usando o módulo multiprocessing com 4 processos.
 
-![gif](/gifs/questao08.gif)
+![gif](./gifs/questao08.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao08.py)
 
@@ -132,7 +132,7 @@ def fatorial(n):
 
 #### 9. Teste todos os 3 programas da questão 8, capture os tempos de execução deles e compare-os, explicando os resultados de tempos. Varie o valor de N em 1.000.000, 5000.000, 10.000.000 (ou escolha números maiores ou melhores de acordo com a velocidade de processamento do computador utilizado para testes).
 
-![gif](/gifs/questao09.gif)
+![gif](./gifs/questao09.gif)
 
 [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09.py)
 
