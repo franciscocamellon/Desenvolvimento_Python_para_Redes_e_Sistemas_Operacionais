@@ -1,21 +1,24 @@
 # Desenvolvimento Python para Redes e Sistemas Operacionais
 
-## Teste de Performance 01
-Neste TP há questões discursivas e de implementação.
+## Assesment
 
-#### 1. Escreva um programa usando o módulo ‘os’ de Python que imprima o nome de usuário.
+#### 1. Escreva um programa em Python que:
+1. obtenha a lista de processos executando no momento, considerando que o processo pode deixar de existir enquanto seu programa manipula suas informações;
+1. imprima o nome do processo e seu PID;
+1. imprima também o percentual de uso de CPU e de uso de memória.
 
 ![gif](/gifs/questao01.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_01.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao01.py)
 
 
 
 
-#### 2. Sobre variáveis de ambiente, responda:
-1. O que são?
-1. Como elas podem ser obtidas pelo módulo ‘os’ de Python?
-1. Como pode ser obtido o caminho completo do diretório de usuário em Python, através das variáveis de ambiente?
+#### 2. Escreva um programa que obtenha um nome de um arquivo texto do usuário e crie um processo para executar o programa do sistema Windows bloco de notas (notepad) para abrir o arquivo.
+
+![gif](/gifs/questao02.gif)
+
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao02.py)
 
 
 
@@ -23,147 +26,113 @@ Neste TP há questões discursivas e de implementação.
 
 
 
-#### 3. Escreva um programa usando o módulo ‘os’ de Python que imprima o PID do próprio processo e também seu GID (identificador de grupo) caso seja sistema do tipo Linux.
+#### 3. Escreva um programa em Python que:
+1. gere uma estrutura que armazena o nome dos arquivos em um determinado diretório e a quantidade de bytes que eles ocupam em disco. Obtenha o nome do diretório do usuário;
+1. Ordene decrescentemente esta estrutura pelo valor da quantidade de bytes ocupada em disco (pode usar as funções sort ou sorted);
+1. gere um arquivo texto com os valores desta estrutura ordenados.
 
 ![gif](/gifs/questao03.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_03.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao03.py)
 
 
 
 
 
 
-#### 4. Que função do módulo ‘os’ de Python é usada para obter o caminho absoluto de um diretório com caminho relativo? Dê um exemplo.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
+#### 4. Escreva um programa em Python que leia um arquivo texto e apresente na tela o seu conteúdo reverso. Exemplo:
+
+arquivo.txt
+
+    Bom dia
+    Você pode falar agora?
+
+Resultado na tela:
+
+    ?aroga ralaf edop êcoV
+    aid moB
+
+![gif](/gifs/questao04.gif)
+
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao04.py)
 
 
 
 
 
 
-#### 5. Escreva um programa que indique se um arquivo existe ou não. Caso exista, indique se é realmente um arquivo ou não.
+#### 5. Escreva um programa em Python que leia dois arquivos, a.txt e b.txt, como a seguir:
+
+a.txt | b.txt
+------------ | -------------
+1 15 -42 33 -7 -2 39 8 | 19 56 -43 23 -7 -11 33 21 61 9
+
+#### Seu programa deve somar elemento por elemento de cada arquivo e imprimir o resultado na tela. Isto é, o primeiro elemento de a.txt deve ser somado ao primeiro elemento de b.txt, segundo elemento de a.txt deve ser somado ao segundo elemento de b.txt, e assim sucessivamente. Caso um arquivo tenha mais elementos que o outro, os elementos que sobrarem do maior devem ser somados a zero.
+
 
 ![gif](/gifs/questao06.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_06.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao05.py)
 
 
 
-#### 6. Escreva um programa que indique a extensão de um arquivo usando função do módulo os.path.
+#### 6. Escreva um programa cliente e servidor sobre TCP em Python em que:
+
+1. O cliente envia para o servidor o nome de um diretório e recebe a lista de arquivos (apenas arquivos) existente nele.
+1. O servidor recebe a requisição do cliente, captura o nome dos arquivos no diretório em questão e envia a resposta ao cliente de volta.
 
 ![gif](/gifs/questao06.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_06.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao06.py)
 
 
 
 
 
 
-#### 7. Escreva um programa que imprima apenas o caminho absoluto de um arquivo com nome relativo. A impressão não deve conter o nome do arquivo, apenas o caminho.
+#### 7. Escreva um programa cliente e servidor sobre UDP em Python que:
+
+1. O cliente envia para o servidor o pedido de obtenção da quantidade total e disponível de memória no servidor e espera receber a resposta durante 5s. Caso passem os 5s, faça seu programa cliente tentar novamente mais 5 vezes (ainda esperando 5s a resposta) antes de desistir.
+1. O servidor repetidamente recebe a requisição do cliente, captura a informação da quantidade total e disponível de memória há no servidor e envia a resposta ao cliente de volta.
 
 ![gif](/gifs/questao07.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_07.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao07.py)
 
 
 
 
 
 
-#### 8. Escreva um programa que mostre a quantidade de bytes (em KB) de cada arquivo em um diretório.
+#### 8. Escreva 3 programas em Python que resolva o seguinte problema:
+     Dado um vetor A de tamanho N com apenas números inteiros positivos, calcule o fatorial de cada um deles e armazene o resultado em um vetor B.
+
+#### Para calcular o fatorial, utilize a seguinte função:
+```python
+def fatorial(n):
+  fat = n
+  for i in range(n-1,1,-1):
+    fat = fat * i
+  return(fat)
+```
+#### Os modos de desenvolver seu programa devem ser:
+
+1. sequencialmente (sem concorrência);
+1. usando o módulo threading com 4 threads;
+1. usando o módulo multiprocessing com 4 processos.
 
 ![gif](/gifs/questao08.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_08.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao08.py)
 
 
 
 
 
 
-#### 9. Escreva um programa que mostre as datas de criação e modificação de cada arquivo em um diretório.
+#### 9. Teste todos os 3 programas da questão 8, capture os tempos de execução deles e compare-os, explicando os resultados de tempos. Varie o valor de N em 1.000.000, 5000.000, 10.000.000 (ou escolha números maiores ou melhores de acordo com a velocidade de processamento do computador utilizado para testes).
 
 ![gif](/gifs/questao09.gif)
 
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_09.py)
+[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09.py)
 
-
-
-
-
-
-#### 10. Os comandos os.exec* e os.spawn* são bastante parecidos. No entanto, eles apresentam uma diferença em suas execuções. Aponte qual é esta diferença.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
-
-
-
-
-
-
-
-#### 11. Escreva um programa que obtenha um nome de um arquivo texto do usuário e crie um processo, usando o módulo ‘os’, de bloco de notas (notepad) para abri-lo.
-
-![gif](/gifs/questao11.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_11.py)
-
-
-
-
-
-
-#### 12. Indique uma maneira de criar um processo externo ao seu programa usando o módulo ‘os’ e usando o módulo ‘subprocess’ de Python. Dê um exemplo de cada.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
-
-
-
-
-
-
-
-
-#### 13. Usando o módulo ‘subprocess’ de Python, crie um processo externo e imprima o PID dele.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-
-#### 14. Explique a principal semelhança e a principal diferença entre os comandos psutil.pids e psutil.process_iter.
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed <b>nibh</b> augue semper porta. <b>imperdiet.</b> Mauris massa. Vestibulum <b>sed</b> lacinia arcu eget nulla. Class aptent <b>augue</b> taciti sociosq.</p>
-
-#### 15. Escreva uma função em Python que, dado um número PID, imprima o nome do usuário proprietário, o tempo de criação e o uso de memória em KB.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 16. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima o tempo de CPU em segundos por núcleo.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 17. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima 20 vezes, de segundo a segundo, o percentual do uso de CPU do computador.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 18. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima em GB, quanto de memória principal e quanto de memória de paginação (swap) existem no computador.
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 19. Escreva um programa em Python, usando o módulo ‘psutil’, que imprima em GB, quanto de armazenamento disponível há na partição do sistema (onde o sistema está instalado).
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
-
-#### 20. Escreva um programa em Python usando o módulo ‘psutil’, que imprima para a partição corrente:
-    a. o nome do dispositivo,
-    b. o tipo de sistema de arquivos que ela possui (FAT, NTFS, EXT, ...),
-    c. o total de armazenamento em GB e
-    d. o armazenamento disponível em GB.
-
-![gif](/gifs/questao13.gif)
-
-[Código](https://github.com/franciscocamellon/Francisco_Camello_DR2_AT/questao_13.py)
