@@ -105,7 +105,8 @@ a.txt | b.txt
 
 
 #### 8. Escreva 3 programas em Python que resolva o seguinte problema:
-     Dado um vetor A de tamanho N com apenas números inteiros positivos, calcule o fatorial de cada um deles e armazene o resultado em um vetor B.
+     Dado um vetor A de tamanho N com apenas números inteiros positivos, 
+     calcule o fatorial de cada um deles e armazene o resultado em um vetor B.
 
 #### Para calcular o fatorial, utilize a seguinte função:
 ```python
