@@ -10,10 +10,11 @@
 ***************************************************************************/
 """
 import socket
-import sys
 import os
+import pickle
+import time
 
-class Questao_06():
+class Questao_06_Client():
     """ This is a TCP client program. """
 
     def __init__(self):
@@ -23,42 +24,29 @@ class Questao_06():
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client_host = socket.gethostname()
         self.door = 8881
-        self.file_name = input('Entre com o nome do arquivo: ')
+        print('===' * 25, 'Questão 06'.center(75), '===' * 25, sep='\n')
+        self.directory_name = input('Entre com o nome do diretório: ')
 
         try:
             self.client_socket.connect((self.client_host, self.door))
-            self.client_socket.send(self.file_name.encode('ascii'))
-            msg = self.client_socket.recv(12)
-            file_size = int(msg.decode('ascii'))
-            if file_size >= 0:
-                dowload_dir = self.cwd + '\\download\\'
-                if not os.path.exists(dowload_dir):
-                    os.mkdir(dowload_dir)
-                _file = open(dowload_dir + self.file_name, 'wb')
-                count = 0
-                _bytes = self.client_socket.recv(4096)
-
-                while _bytes:
-                    _file.write(_bytes)
-                    count = count + len(_bytes)
-                    os.system('cls')
-                    self.download_status(count, file_size)
-                    _bytes = self.client_socket.recv(4096)
-                _file.close()
-            else:
-                print('Arquivo não encontrado no servidor!')
+            self.client_socket.send(self.directory_name.encode('ascii'))
+            msg = self.client_socket.recv(4096)
+            l_msg = pickle.loads(msg)
+            self.print_result(l_msg)
+            
         except Exception as err:
             print(str(err))
             self.client_socket.close()
         input("Pressione qualquer tecla para sair...")
 
-    def download_status(self, _bytes, _size):
-        """ Docstring """
-        kbytes = _bytes/1024
-        tam_bytes = _size/1024
-        texto = 'Baixando... '
-        texto = texto + '{:<.2f}'.format(kbytes) + ' KB '
-        texto = texto + 'de ' + '{:<.2f}'.format(tam_bytes) + ' KB'
-        print(texto)
+    def print_result(self, list_file):
+        """ This is a printer! It prints. """
+        print('---' * 25, 'Informações recebidas!', '---' * 25, sep='\n')
+        time.sleep(2)
+        print('Conteúdo do diretório: \n {}'.format(os.path.abspath(self.directory_name)),
+                '\t {:<15} {:^10}'.format('Arquivo', 'Tamanho'), sep="\n")
+        for _file in list_file:
+            print('\t {:<15} {:^10}'.format(_file[0], _file[1]))
+        print('---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
 
-Questao_06().print_result()
+Questao_06_Client()

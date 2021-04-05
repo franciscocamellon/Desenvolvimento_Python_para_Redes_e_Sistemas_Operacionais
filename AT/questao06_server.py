@@ -11,8 +11,13 @@
 """
 import socket
 import os
+import pickle
+import errno
+import time
+from psutil._common import bytes2human
 
-class Questao_06():
+
+class Questao_06_Server():
     """ This is a TCP server program. """
 
     def __init__(self):
@@ -26,23 +31,37 @@ class Questao_06():
             self.server_host, self.door))
 
         while True:
-            (socket_cliente, addr) = self.server_socket.accept()
+            (socket_client, addr) = self.server_socket.accept()
             print("Conectado a:", str(addr))
-            msg = socket_cliente.recv(2048)
-            file_name = msg.decode('ascii')
-            if os.path.isfile(file_name):
-                file_size = os.stat(file_name).st_size
-                socket_cliente.send(str(file_size).encode('ascii'))
-                _file = open(file_name, 'rb')
-                _bytes = _file.read(4096)
-                while _bytes:
-                    socket_cliente.send(_bytes)
-                    _bytes = _file.read(4096)
-                _file.close()
+            msg = socket_client.recv(2048)
+            directory_name = msg.decode('ascii')
+            
+            client_list = self.process_data(directory_name)
+            print('Requisitando informações...')
+            msg = pickle.dumps(client_list)
+            time.sleep(2)
+            socket_client.send(msg)
+            print('Informações enviadas!')
+            
+            socket_client.close()
+
+    def process_data(self, directory):
+        """ This function process the input data from init_class. """
+
+        if os.path.exists(directory):
+            self.list_dir = os.listdir(directory)
+        else:
+            print('Diretório não existe!')
+        list_file = []
+        for item in self.list_dir:
+            if os.path.isfile(item):
+                list_file.append(
+                    [item, bytes2human(os.stat(item).st_size)])
+            elif os.path.isdir(item):
+                pass
             else:
-                print('Arquivo não encontrado!')
-                socket_cliente.send('-1'.encode('ascii'))
-            socket_cliente.close()
+                self.error = FileNotFoundError(errno.ENOENT, os.strerror(
+                    errno.ENOENT), os.path.basename(item))
+        return list_file
 
-
-Questao_06()
+Questao_06_Server()
