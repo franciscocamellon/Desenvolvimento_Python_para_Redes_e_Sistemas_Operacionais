@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     print('===' * 25, 'Questão 09-c'.center(75), '===' * 25, sep='\n')
 
-    vector_size = int(input("Entre com o tamanho do vetor(0-20): "))
+    vector_size = int(input("Entre com o tamanho do vetor: "))
 
     start_time = float(time.time())
 

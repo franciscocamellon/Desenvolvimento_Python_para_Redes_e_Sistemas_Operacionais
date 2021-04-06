@@ -18,6 +18,7 @@ import multiprocessing
 class Threading():
 
     def __init__(self):
+        print('===' * 25, 'Questão 08-b'.center(75), '===' * 25, sep='\n')
         self.vector_A = [10, 15, 20, 17]
         self.vector_B = []
         self.list_size = len(self.vector_A)
@@ -49,5 +50,6 @@ class Threading():
             t.join()
 
         print(self.vector_B)
+        print('---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
 
 Threading()

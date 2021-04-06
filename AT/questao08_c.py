@@ -32,6 +32,7 @@ def calc_fatorial(q1, q2):
 
 
 if __name__ == "__main__":
+    print('===' * 25, 'Questão 08-b'.center(75), '===' * 25, sep='\n')
 
     vector_size = int(input("Entre com o tamanho do vetor(0-20): "))
 
@@ -62,4 +63,5 @@ if __name__ == "__main__":
             vector_B.append(item)
 
     print(vector_B)
+    print('---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
 

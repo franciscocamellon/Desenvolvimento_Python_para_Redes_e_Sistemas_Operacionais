@@ -142,18 +142,29 @@ def fatorial(n):
 
 Testes | 08-a | 08-b | 08-c
 -----|-----|------|------
-1000 | 0 | 0.10051083564758301 | 0
-5000 | 0 | 0 | 0
-10000 | 0 | 74.2285885810852 | 0
+1000 | 0.0907893180847168 | 0.10051083564758301 | 0.09075546264648438
+5000 | 8.026559591293335 | 7.5201215744018555 | 0
+10000 | 61.725913524627686 | 60.146103620529175 | 0
 
-![gif](./gifs/questao09_a.png)
-![gif](./gifs/questao09_b.png)
-![gif](./gifs/questao09_b.png)
-![gif](./gifs/questao09_b.png)
+![gif](./gifs/questao09_a_1000.png)
+![gif](./gifs/questao09_a_5000.png)
+![gif](./gifs/questao09_a_10000.png)
 
 [Código 09-a](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09_a.py)
 
+---
+
+![gif](./gifs/questao09_b_1000.png)
+![gif](./gifs/questao09_b_5000.png)
+![gif](./gifs/questao09_b_10000.png)
+
 [Código 09-b](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09_b.py)
+
+---
+
+![gif](./gifs/questao09_c_1000.png)
+<!-- ![gif](./gifs/questao09_b.png)
+![gif](./gifs/questao09_b.png) -->
 
 [Código 09-c](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09_c.py)
 

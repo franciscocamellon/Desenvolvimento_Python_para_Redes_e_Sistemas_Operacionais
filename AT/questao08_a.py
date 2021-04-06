@@ -26,9 +26,11 @@ class Sequencial():
         return(fat)
 
     def print(self):
+        print('===' * 25, 'Questão 08-a'.center(75), '===' * 25, sep='\n')
         for item in self.vector_A:
             sq_factor = self.fatorial(item)
             self.vector_B.append(sq_factor)
         print(self.vector_B)
+        print('---' * 25, 'Aluno: Francisco Camello'.rjust(75), sep="\n")
 
 Sequencial().print()
