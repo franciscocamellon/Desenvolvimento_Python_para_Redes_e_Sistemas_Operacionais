@@ -118,22 +118,42 @@ def fatorial(n):
 ```
 #### Os modos de desenvolver seu programa devem ser:
 
-1. sequencialmente (sem concorrência);
+1. sequencialmente (sem concorrência); 
+
+    ![gif](./gifs/questao08_a.gif)
+
+    [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao08_a.py)
+
 1. usando o módulo threading com 4 threads;
+
+    ![gif](./gifs/questao08_b.gif)
+
+    [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao08_b.py)
+
 1. usando o módulo multiprocessing com 4 processos.
 
-![gif](./gifs/questao08.gif)
+    ![gif](./gifs/questao08_c.gif)
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao08.py)
-
-
-
+    [Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao08_c.py)
 
 
 
 #### 9. Teste todos os 3 programas da questão 8, capture os tempos de execução deles e compare-os, explicando os resultados de tempos. Varie o valor de N em 1.000.000, 5000.000, 10.000.000 (ou escolha números maiores ou melhores de acordo com a velocidade de processamento do computador utilizado para testes).
 
-![gif](./gifs/questao09.gif)
+Testes | 08-a | 08-b | 08-c
+-----|-----|------|------
+1000 | 0 | 0.10051083564758301 | 0
+5000 | 0 | 0 | 0
+10000 | 0 | 74.2285885810852 | 0
 
-[Código](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09.py)
+![gif](./gifs/questao09_a.png)
+![gif](./gifs/questao09_b.png)
+![gif](./gifs/questao09_b.png)
+![gif](./gifs/questao09_b.png)
+
+[Código 09-a](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09_a.py)
+
+[Código 09-b](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09_b.py)
+
+[Código 09-c](https://github.com/franciscocamellon/Desenvolvimento_Python_para_Redes_e_Sistemas_Operacionais/blob/master/AT/questao09_c.py)
 
